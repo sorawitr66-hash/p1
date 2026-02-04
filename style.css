@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BLE Sensor Dashboard</title>
+
+  <style>
+    html {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f6f8;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    /* ===== Top Navigation ===== */
+    .topnav {
+      background: linear-gradient(90deg, #0A1128, #1b2a4e);
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: white;
+      margin: 0;
+    }
+
+    /* ===== Content ===== */
+    .content {
+      padding: 40px 20px;
+    }
+
+    /* ===== Card Grid ===== */
+    .card-grid {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* ===== Card ===== */
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #0A1128;
+    }
+
+    /* ===== Readings ===== */
+    .label {
+      color: #8a8a8a;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    .reading {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1b8a94;
+      margin: 0.3rem 0;
+    }
+
+    /* ===== Buttons ===== */
+    button {
+      color: white;
+      padding: 12px 22px;
+      margin: 6px;
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .connectButton {
+      background-color: #24af37;
+    }
+
+    .disconnectButton {
+      background-color: #d13a30;
+    }
+
+    .status {
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .connected {
+      color: #24af37;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <h1>BLE Sensor Dashboard</h1>
+  </div>
+
+  <div class="content">
+    <button class="connectButton">Connect BLE</button>
+    <button class="disconnectButton">Disconnect</button>
+    <p class="status connected">BLE state: Connected</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h2>Sensor Data</h2>
+
+        <div class="label">🌡 Temperature</div>
+        <div class="reading">25.19 °C</div>
+
+        <div class="label">❤️ Heart Rate</div>
+        <div class="reading">-- bpm</div>
+
+        <div class="label">🩸 SpO₂</div>
+        <div class="reading">-- %</div>
+
+        <div class="label">
+          Last reading: 2/4/2026, 2:08:30 PM
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
